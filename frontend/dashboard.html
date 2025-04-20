@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blood Bank Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-red-600 text-white p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Blood Bank Dashboard</h1>
+    <nav>
+      <a href="index.html" class="px-3 py-1 hover:bg-red-700 rounded">Home</a>
+      <a href="dashboard.html" class="px-3 py-1 bg-red-700 rounded">Dashboard</a>
+      <a href="#" class="px-3 py-1 hover:bg-red-700 rounded">Logout</a>
+    </nav>
+  </header>
+
+  <main class="container mx-auto p-6">
+
+    <!-- Blood Stock Availability -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4 text-gray-800">Blood Stock Availability</h2>
+      <div class="grid grid-cols-4 gap-4">
+        <div class="bg-white p-4 rounded shadow text-center">
+          <div class="text-red-600 text-3xl font-bold">A+</div>
+          <div class="text-gray-700 text-lg">120 Units</div>
+        </div>
+        <div class="bg-white p-4 rounded shadow text-center">
+          <div class="text-red-600 text-3xl font-bold">A-</div>
+          <div class="text-gray-700 text-lg">80 Units</div>
+        </div>
+        <div class="bg-white p-4 rounded shadow text-center">
+          <div class="text-red-600 text-3xl font-bold">B+</div>
+          <div class="text-gray-700 text-lg">95 Units</div>
+        </div>
+        <div class="bg-white p-4 rounded shadow text-center">
+          <div class="text-red-600 text-3xl font-bold">B-</div>
+          <div class="text-gray-700 text-lg">60 Units</div>
+        </div>
+        <div class="bg-white p-4 rounded shadow text-center">
+          <div class="text-red-600 text-3xl font-bold">AB+</div>
+          <div class="text-gray-700 text-lg">50 Units</div>
+        </div>
+        <div class="bg-white p-4 rounded shadow text-center">
+          <div class="text-red-600 text-3xl font-bold">AB-</div>
+          <div class="text-gray-700 text-lg">30 Units</div>
+        </div>
+        <div class="bg-white p-4 rounded shadow text-center">
+          <div class="text-red-600 text-3xl font-bold">O+</div>
+          <div class="text-gray-700 text-lg">150 Units</div>
+        </div>
+        <div class="bg-white p-4 rounded shadow text-center">
+          <div class="text-red-600 text-3xl font-bold">O-</div>
+          <div class="text-gray-700 text-lg">70 Units</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Blood Requests -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4 text-gray-800">Recent Blood Requests</h2>
+      <table class="w-full table-auto border-collapse border border-gray-300 bg-white rounded shadow">
+        <thead>
+          <tr class="bg-red-600 text-white">
+            <th class="border border-gray-300 px-4 py-2">Request ID</th>
+            <th class="border border-gray-300 px-4 py-2">Blood Group</th>
+            <th class="border border-gray-300 px-4 py-2">Quantity</th>
+            <th class="border border-gray-300 px-4 py-2">Hospital</th>
+            <th class="border border-gray-300 px-4 py-2">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border border-gray-300 px-4 py-2">REQ12345</td>
+            <td class="border border-gray-300 px-4 py-2">A+</td>
+            <td class="border border-gray-300 px-4 py-2">5 Units</td>
+            <td class="border border-gray-300 px-4 py-2">City Hospital</td>
+            <td class="border border-gray-300 px-4 py-2 text-green-600 font-semibold">Approved</td>
+          </tr>
+          <tr>
+            <td class="border border-gray-300 px-4 py-2">REQ12346</td>
+            <td class="border border-gray-300 px-4 py-2">O-</td>
+            <td class="border border-gray-300 px-4 py-2">3 Units</td>
+            <td class="border border-gray-300 px-4 py-2">General Hospital</td>
+            <td class="border border-gray-300 px-4 py-2 text-yellow-600 font-semibold">Pending</td>
+          </tr>
+          <tr>
+            <td class="border border-gray-300 px-4 py-2">REQ12347</td>
+            <td class="border border-gray-300 px-4 py-2">B+</td>
+            <td class="border border-gray-300 px-4 py-2">2 Units</td>
+            <td class="border border-gray-300 px-4 py-2">Health Care Center</td>
+            <td class="border border-gray-300 px-4 py-2 text-red-600 font-semibold">Rejected</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Donor Registrations -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4 text-gray-800">Donor Registrations</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="bg-white p-4 rounded shadow text-center">
+          <div class="text-3xl font-bold text-red-600">150</div>
+          <div class="text-gray-700">Total Donors</div>
+        </div>
+        <div class="bg-white p-4 rounded shadow text-center">
+          <div class="text-3xl font-bold text-red-600">45</div>
+          <div class="text-gray-700">New Donors This Month</div>
+        </div>
+        <div class="bg-white p-4 rounded shadow text-center">
+          <div class="text-3xl font-bold text-red-600">10</div>
+          <div class="text-gray-700">Donation Camps</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
